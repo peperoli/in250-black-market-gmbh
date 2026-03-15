@@ -1,6 +1,6 @@
 # Black Market HQ
 
-All the greatest software and top secret secrets by your favorite tech company.
+All the greatest software by your favorite tech company.
 
 ![Maurice likes it hot.](/docs/this-is-fine.jpg)
 
@@ -17,4 +17,6 @@ For more information, please refer to our documentation:
 
 - [x] Extract files and cleanup folder structure
 - [x] Add documentation for new folder structure
-- [ ] Decide how to handle secrets
+- [x] Decide how to handle secrets
+- [ ] Destroy the patriarchy
+- [ ] Eat cheese
