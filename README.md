@@ -9,9 +9,7 @@ All the greatest software by your favorite tech company.
 For more information, please refer to our documentation:
 
 - [Folder Structure](/docs/01_folder-structure.md)
-- Contribution
-- Code of Conduct
-- License
+- [Branching Strategy](/docs/02_branching-strategy.md)
 
 ## Tasks
 
