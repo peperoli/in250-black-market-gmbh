@@ -1,0 +1,33 @@
+name: Mark and close stale issues and pull requests
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mark stale issues and pull requests
+        uses: actions/stale@v10
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          days-before-stale: 30
+          days-before-close: 7
+          stale-issue-message: >-
+            Dieses Issue wurde automatisch als inaktiv markiert, da es seit 30 Tagen keine Aktivität gab.
+            Wenn das Thema noch relevant ist, kommentiere bitte hier oder aktualisiere das Issue.
+            Andernfalls wird es in 7 Tagen automatisch geschlossen.
+          stale-pr-message: >-
+            Dieser Pull Request wurde automatisch als inaktiv markiert, da es seit 30 Tagen keine Aktivität gab.
+            Wenn weiterhin daran gearbeitet wird, hinterlasse bitte ein Update oder pushe neue Änderungen.
+            Andernfalls wird er in 7 Tagen automatisch geschlossen.
+          close-issue-message: >-
+            Dieses Issue wurde automatisch geschlossen, da nach der Markierung als stale innerhalb von 7 Tagen keine weitere Aktivitaet erfolgt ist.
+          close-pr-message: >-
+            Dieser Pull Request wurde automatisch geschlossen, da nach der Markierung als stale innerhalb von 7 Tagen keine weitere Aktivitaet erfolgt ist.
